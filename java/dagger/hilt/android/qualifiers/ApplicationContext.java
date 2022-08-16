@@ -12,7 +12,10 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ */// TODO(erichang): It would be nice to make this Class<? extends Application> but then the default
+  // would have to be Application which would make the default actually valid even without the
+  // plugin. Maybe that is a good thing...but might be better to have users be explicit about the
+  // base class they want.
 
 package dagger.hilt.android.qualifiers;
 

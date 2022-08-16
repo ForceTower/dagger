@@ -32,7 +32,10 @@ java_plugin(
 
 java_library(
     name = "processor_lib",
-    srcs = ["AndroidEntryPointProcessor.java"],
+    srcs = [
+        "AndroidEntryPointProcessor.java",
+        "DynamicAndroidEntryPointProcessor.java"
+    ],
     deps = [
         ":android_generators",
         ":metadata",
@@ -59,6 +62,7 @@ java_library(
         "InjectorEntryPointGenerator.java",
         "ServiceGenerator.java",
         "ViewGenerator.java",
+        "DynamicFeatureGenerator.java"
     ],
     deps = [
         ":metadata",

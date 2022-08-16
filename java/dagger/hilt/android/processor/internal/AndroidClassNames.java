@@ -52,12 +52,21 @@ public final class AndroidClassNames {
   public static final ClassName ATTRIBUTE_SET = get("android.util", "AttributeSet");
   public static final ClassName LAYOUT_INFLATER = get("android.view", "LayoutInflater");
 
+  public static final ClassName ENTRY_POINT_ACCESSORS = get("dagger.hilt.android", "EntryPointAccessors");
+
+  public static final ClassName DYNAMIC_FEATURE_COMPONENT =
+          get("dagger.hilt.android.components", "DynamicFeatureComponent");
+
   public static final ClassName ANDROID_ENTRY_POINT =
       get("dagger.hilt.android", "AndroidEntryPoint");
+  public static final ClassName DYNAMIC_ANDROID_ENTRY_POINT =
+      get("dagger.hilt.android", "DynamicAndroidEntryPoint");
   public static final ClassName WITH_FRAGMENT_BINDINGS =
       get("dagger.hilt.android", "WithFragmentBindings");
   public static final ClassName HILT_ANDROID_APP =
       get("dagger.hilt.android", "HiltAndroidApp");
+  public static final ClassName HILT_DYNAMIC_FEATURE =
+      get("dagger.hilt.android", "HiltDynamicFeature");
   public static final ClassName CUSTOM_INJECT =
       get("dagger.hilt.android.migration", "CustomInject");
   public static final ClassName CUSTOM_INJECTION =
@@ -99,6 +108,8 @@ public final class AndroidClassNames {
       get("dagger.hilt.android.internal.managers", "ServiceComponentManager");
   public static final ClassName VIEW_COMPONENT_MANAGER =
       get("dagger.hilt.android.internal.managers", "ViewComponentManager");
+  public static final ClassName DYNAMIC_FEATURE_COMPONENT_MANAGER =
+      get("dagger.hilt.android.internal.managers", "DynamicFeatureComponentManager");
 
   public static final ClassName HAS_CUSTOM_INJECT =
       get("dagger.hilt.android.internal.migration", "HasCustomInject");

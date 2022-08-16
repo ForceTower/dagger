@@ -101,6 +101,10 @@ public abstract class AndroidEntryPointMetadata {
     return Processors.hasAnnotation(element(), AndroidClassNames.OPTIONAL_INJECT);
   }
 
+  public boolean isDynamicFeatureRoot() {
+    return Processors.hasAnnotation(element(), AndroidClassNames.HILT_DYNAMIC_FEATURE);
+  }
+
   /** Returns true if any base class (transitively) allows optional injection. */
   public boolean baseAllowsOptionalInjection() {
     return baseMetadata().isPresent() && baseMetadata().get().allowsOptionalInjection();
@@ -164,7 +168,9 @@ public abstract class AndroidEntryPointMetadata {
   private static final ImmutableSet<ClassName> HILT_ANNOTATION_NAMES =
       ImmutableSet.of(
           AndroidClassNames.HILT_ANDROID_APP,
-          AndroidClassNames.ANDROID_ENTRY_POINT);
+          AndroidClassNames.ANDROID_ENTRY_POINT,
+          AndroidClassNames.DYNAMIC_ANDROID_ENTRY_POINT,
+          AndroidClassNames.HILT_DYNAMIC_FEATURE);
 
   private static ImmutableSet<? extends AnnotationMirror> hiltAnnotations(Element element) {
     return element.getAnnotationMirrors().stream()
